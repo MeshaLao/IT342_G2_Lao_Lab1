@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
+import { useAuth } from './hooks/useAuth';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import DashboardPage from './pages/DashboardPage';
+import './styles/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Router() {
+  const { token, loading } = useAuth();
+  const [page, setPage] = useState('login');
+
+  if (loading) {
+    return (
+      <div className="page">
+        <div className="card">
+          <p style={{ color: 'var(--muted)', textAlign: 'center' }}>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (token) return <DashboardPage />;
+
+  if (page === 'register') return <RegisterPage onNavigate={setPage} />;
+  return <LoginPage onNavigate={setPage} />;
 }
 
-export default App;
+export default function App() {
+  return (
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
+  );
+}
