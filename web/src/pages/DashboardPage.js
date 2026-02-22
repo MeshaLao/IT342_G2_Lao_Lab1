@@ -27,8 +27,8 @@ export default function DashboardPage() {
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-logo">
-          <div className="nav-logo-icon">🔐</div>
-          <span className="nav-logo-text">userAuth</span>
+          <div className="nav-logo-icon"></div>
+          <span className="nav-logo-text">Mini App</span>
         </div>
         <div className="nav-right">
           <span className="nav-greeting">
