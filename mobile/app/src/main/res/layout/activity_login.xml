@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bazaar_gradient"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
+
+        <!-- Logo Circle with Gold Ring -->
+        <FrameLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Gold Ring -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#fecd6d"/>
+
+            <!-- Inner Circle -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="12dp"
+                app:cardBackgroundColor="#E8E4C9">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo"
+                    android:contentDescription="Logo"/>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MINI APP"
+            android:textSize="11sp"
+            android:textColor="#fecd6d"
+            android:letterSpacing="0.25"
+            android:textStyle="bold"
+            android:alpha="0.8"
+            android:layout_marginBottom="40dp"/>
+
+        <!-- Rounded Arch Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="24dp"
+            app:cardBackgroundColor="#E6000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="36dp"
+                android:paddingEnd="36dp"
+                android:paddingTop="56dp"
+                android:paddingBottom="44dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WELCOME BACK"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:fontFamily="serif"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in to your account to continue"
+                    android:textSize="13sp"
+                    android:textColor="#E8E4C9"
+                    android:gravity="center"
+                    android:alpha="0.85"
+                    android:fontStyle="italic"
+                    android:layout_marginBottom="36dp"/>
+
+                <!-- Email Input -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EMAIL"
+                    android:textSize="10sp"
+                    android:textColor="#fecd6d"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/input_background"
+                    android:hint="you@emai.com"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#E8E4C9"
+                    android:textColorHint="#60E8E4C9"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Password Input -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PASSWORD"
+                    android:textSize="10sp"
+                    android:textColor="#fecd6d"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/input_background"
+                    android:hint="········"
+                    android:inputType="textPassword"
+                    android:textColor="#E8E4C9"
+                    android:textColorHint="#60E8E4C9"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="28dp"/>
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:text="SIGN IN"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:backgroundTint="#fecd6d"
+                    android:textColor="#70191d"
+                    app:cornerRadius="12dp"
+                    android:fontFamily="serif"/>
+
+                <TextView
+                    android:id="@+id/goToRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Don't have an account?"
+                    android:textColor="#E8E4C9"
+                    android:layout_marginTop="28dp"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:alpha="0.7"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Register"
+                    android:textColor="#fecd6d"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="18dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    android:indeterminateTint="#fecd6d"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
