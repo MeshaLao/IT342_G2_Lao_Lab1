@@ -28,11 +28,13 @@
 - Web UI pages: Logout functionality
 - Frontend styling completed 
 - Frontend connected to backend APIs
+- redesign the Frontend pages
+- Mobile app UI (2nd version) for Login, Register, Dashboard completed
+- Mobile app (Android Studio) connected to backend (Lab 3)
 
 ## IN-PROGRESS
 - Testing registration → login → dashboard → logout flow
-- redesigning the UI
+- redesigning the UI again (if needed)
 
 ## TODO
 - README.md with setup instructions
-- Mobile app development (Lab 3 - next session)
